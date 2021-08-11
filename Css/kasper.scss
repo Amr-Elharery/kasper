@@ -859,5 +859,10 @@ header{
 //Start Contact US
 .contact{
   padding: $sectionPadding 0 ;
+  .container{
+    section{
+      text-align: center;
+    }
+  }
 }
 //End Contact US

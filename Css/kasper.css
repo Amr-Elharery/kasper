@@ -684,5 +684,7 @@ header {
 
 .contact {
   padding: 100px 0; }
+  .contact .container section {
+    text-align: center; }
 
 /*# sourceMappingURL=kasper.css.map */
