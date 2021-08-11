@@ -666,3 +666,198 @@ header{
   }
 }
 //End Our Skills
+//Start Quote
+.quote{
+  padding: $sectionPadding 0 ;
+  background-image: url("../Images/quote.jpg");
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #FFF;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,75%);
+  }
+  .container{
+    position: relative;
+    q{
+      font-size: 30px;
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+}
+//End Quote
+//Start Pricing
+.pricing{
+    padding:$sectionPadding 0 ;
+  .plans{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax( 250px , 1fr));
+    gap:30px;
+    .plan{
+      background-color: #fcfcfc;
+      text-align: center;
+     .head{
+        padding: 40px 20px;
+        border-bottom: 1px solid $mainColor;
+        border-top: 1px solid $mainColor;
+       h3{
+          font-weight:normal;
+         margin-bottom: 20px;
+         text-transform: uppercase;
+       }
+       span{
+         font-size: 60px;
+         font-weight:bold;
+         &::before{
+            content: '$';
+            position: relative;
+            font-size: 25px;
+           top: -40px;
+           font-weight: normal;
+           margin-right: 15px;
+         }
+         &::after{
+           content: '/Mo';
+           font-size: 25px;
+           position: relative;
+           right: -15px;
+         }
+       }
+     }
+      ul{
+        border-bottom:1px solid $mainColor;
+        li{
+            padding: 20px;
+          &:not(:last-child){
+            position: relative;
+            &::after{
+              content: '';
+              height: 1px;
+              width: 120px;
+              background-color: $mainColor;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+      .foot{
+        a{
+          display: block;
+          padding:20px;
+          text-decoration: none;
+          border: 1px solid $mainColor;
+          width: fit-content;
+          margin: 30px auto;
+          color: initial;
+        }
+      }
+    }
+  }
+  .contact-text{
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+  }
+  .contact-link{
+    text-decoration: none;
+    font-size: 16px;
+    color:#FFF;
+    background-color: $mainColor;
+    padding: 15px 30px;
+    width: fit-content;
+    margin: 20px auto;
+    display: block;
+  }
+}
+//End Pricing
+//Start Subscribe
+.subscribe{
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0 , 50%);
+  }
+  padding: $sectionPadding 0;
+  background-image:url("../Images/subscribe.jpg");
+  background-size:cover;
+  position: relative;
+  color: #FFF;
+  .container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    @media (max-width:991px){
+      flex-direction: column;
+    }
+    form{
+      display: flex;
+      position: relative;
+      width: 500px;
+      max-width: 100%;
+      i{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 30px;
+        }
+      input:nth-of-type(1){
+          border:1px solid #FFF;
+          border-right:none;
+          background: none;
+          padding: 20px 20px 20px 60px;
+          caret-color: $mainColor;
+          width: calc(100% - 130px);
+        color: #FFF;
+          &:focus{
+            outline: none;
+          }
+        }
+      ::placeholder{
+        color: #FFF;
+      }
+      input:nth-of-type(2){
+          width: 130px;
+        background-color: $mainColor;
+        color:#FFF;
+        padding:10px 20px ;
+        border:1px solid #FFF;
+        border-left:none;
+        text-transform:uppercase;
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+    p{
+      line-height: 2;
+      margin-left: 50px;
+      @media (max-width: 991px){
+        margin: 30px 0 0;
+      }
+      @media (max-width: 767px){
+        text-align: center;
+        margin: 30px 0 0;
+      }
+    }
+  }
+}
+//End Subscribe
+//Start Contact US
+.contact{
+  padding: $sectionPadding 0 ;
+}
+//End Contact US
